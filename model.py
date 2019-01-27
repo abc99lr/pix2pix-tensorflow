@@ -114,7 +114,8 @@ class pix2pix(object):
         sample = [load_data(sample_file) for sample_file in data]
 
         if (self.is_grayscale):
-            sample_images = np.array(sample).astype(np.float32)[:, :, :, None]
+            # sample_images = np.array(sample).astype(np.float32)[:, :, :, None]
+            sample_images = np.array(sample).astype(np.float32)
         else:
             sample_images = np.array(sample).astype(np.float32)
         return sample_images
